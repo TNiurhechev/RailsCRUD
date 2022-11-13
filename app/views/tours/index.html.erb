@@ -1,0 +1,23 @@
+<html>
+<head>
+  <title>Main</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+    <body>
+        <div class="text-center">
+            <h1 class="display-3"><b>ProTour</b></h1>
+            <p style="color: green"><%= notice %></p>
+
+            <h6 class="display-6">Tours</h6>
+            <div id="tours">
+              <% @tours.each do |tour| %>
+                <%= render tour %>
+                <p>
+                  <%= link_to "Show this tour", tour, :class => 'btn btn-primary' %>
+                </p>
+              <% end %>
+            </div>
+            <%= link_to "New tour", new_tour_path, :class => 'btn btn-success' %>
+        </div>
+    </body>
+</html>

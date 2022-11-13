@@ -1,0 +1,14 @@
+<head>
+  <title>Showing tour</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+
+<div class="text-center">
+  <h2 class="display-3"><b>ProTour</b></h2>
+  <p style="color: green"><%= notice %></p>
+  <%= render @tour %>
+  <%= link_to "Edit this tour", edit_tour_path(@tour), :class => 'btn btn-primary' %>
+  <%= link_to "Back to tours", tours_path, :class => 'btn btn-secondary' %>
+
+  <%= button_to "Destroy this tour", @tour, method: :delete, :class => 'btn btn-danger' %>
+</div>
